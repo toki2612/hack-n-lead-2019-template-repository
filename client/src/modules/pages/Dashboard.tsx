@@ -4,6 +4,8 @@ import * as React from 'react'
 import styles from './Dashboard.module.css'
 import { RouteComponentProps } from 'react-router-dom'
 import { TabsContainer } from '../common/TabsContainer'
+import { AccountsView } from '../input/AccountsView'
+import { PortfolioView } from './PortfolioView'
 
 type MatchParams = {
   outputUid: string
@@ -20,18 +22,23 @@ export class Dashboard extends React.Component<IDashboardProps> {
 
     const tabs = [
       {
-        name: 'tab1',
-        to: `/tab1`,
+        name: 'Data',
+        to: `/data`,
         render: () => <div/>
       },
       {
-        name: 'tab2',
-        to: `/tab2`,
+        name: 'Algo',
+        to: `/algo`,
         render: () => <div/>
       },
       {
-        name: 'tab3',
-        to: `/tab3`,
+        name: 'Risks',
+        to: `/risks`,
+        render: () => <PortfolioView />
+      },
+      {
+        name: 'Report',
+        to: `/report`,
         render: () => <div/>
       }
     ]

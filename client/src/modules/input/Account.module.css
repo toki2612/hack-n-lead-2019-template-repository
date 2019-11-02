@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  flex-direction: column;
+ 
+  background-color: white;
+  width: 100%;
+  height: 8rem;
+  margin: 0.25rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.mainBox {
+  display: flex;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 1rem 1.5rem;
+}
+
+.riskBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  /* background-color: #ffc400; */
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.riskDataText {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.subData {
+  margin-top: 0.5rem;
+}
+
+.data {
+  padding: 0 0.25rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.dataText {
+  color: #9b9b9b;
+  font-size: 0.64rem;
+}
+
+.numberText {
+  color: #4a4a4a;
+  font-size: 0.64rem;
+}
+
+.nameText {
+  color: #4880ff;
+  font-size: 0.64rem;
+  font-weight: bold;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.profileAvatar {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../../resources/img/avatar.jpg);
+}
+
+.profileData {
+  margin-left: 1rem;
+}
+
+.risks {
+  padding: 1rem 2rem;
+  width: 75%;
+}

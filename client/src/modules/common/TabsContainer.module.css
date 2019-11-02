@@ -1,6 +1,5 @@
 .tabs {
   padding-top: 160px;
-  margin-bottom: 1rem;
 
   display: flex;
   justify-content: center;
@@ -43,6 +42,7 @@
   letter-spacing: 0.6px;
   min-height: 3rem;
   min-width: 120px;
+  font-size: 0.56rem;
 }
 
 @media (--desktop) {
@@ -82,7 +82,7 @@
 
 .content {
   display: flex;
-  flex: 0 1 auto;
+  flex: 0 1 100%;
   position: relative;
   /* overflow-y: auto; */
   overflow-x: hidden;
