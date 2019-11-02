@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.messageBox {
+  width: 16rem;
+  height: 9rem;
+  background-color: #fff;
+  border-radius: 3px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.messageText {
+  color: #4a4a4a;
+  font-size: 0.75rem;
+}
+
+.progress {
+  color: #24ccb8;
+}
+
+.iconBox {
+  position: relative;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid #e8e8e8;
+}
+
+.calcIcon, .checkIcon {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+}
+
+.calcIcon {
+  color: #9b9b9b;
+}
+
+.checkIcon {
+  color: #24ccb8;
+}
