@@ -7,15 +7,15 @@ import { RiskSlider } from '../common/RiskSlider'
 
 const riskData: {[key: string]: any} = {
   risk1: {
-    label: 'Risk 1',
+    label: 'Channel risk',
     value: 34
   },
   risk2: {
-    label: 'Risk 2',
+    label: 'Country risk index',
     value: 20
   },
   risk3: {
-    label: 'Risk 3',
+    label: 'Transaction risk',
     value: 50
   }
 }
