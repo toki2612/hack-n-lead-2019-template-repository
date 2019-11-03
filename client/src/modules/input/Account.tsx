@@ -4,6 +4,7 @@ import * as React from 'react'
 import styles from './Account.module.css'
 import { Typography } from '@material-ui/core'
 import { RiskSlider } from '../common/RiskSlider'
+import { bind } from 'bind-decorator'
 
 interface IAccountProps {
   riskRate: number
@@ -11,8 +12,15 @@ interface IAccountProps {
   id: string
 }
 
+const colors = ['#24ccb8', '#ff5660', '#ffc400']
+
 @observer
 export class Account extends React.Component<IAccountProps> {
+
+  @bind
+  randomColor () {
+    return colors[Math.floor(Math.random() * colors.length)]
+  }
 
   render () {
 
@@ -42,7 +50,7 @@ export class Account extends React.Component<IAccountProps> {
     return (
       <div className={styles.container}>
         <div className={styles.mainBox}>
-          <div className={styles.riskBox} style={{ backgroundColor: `rgba(255, ${255 - this.props.riskRate * 3}, 0, 1)` }}>
+          <div className={styles.riskBox} style={{ backgroundColor: this.randomColor() }}>
             <Typography className={styles.riskDataText}>{`${this.props.riskRate}%`}</Typography>
           </div>
           <div className={styles.data}>
