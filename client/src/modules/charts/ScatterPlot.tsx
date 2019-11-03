@@ -22,7 +22,30 @@ export class ScatterPlot extends React.Component<IScatterPlotProps> {
   }
 
   @bind
+  getColors (chart: Highcharts.Chart) {
+    // if (this.chart && this.chart.current) {
+    console.log(chart)
+    // const newColors = colors.map((color: any) => {
+    //   return {
+    //     radialGradient: {
+    //       cx: 0.4,
+    //       cy: 0.3,
+    //       r: 0.5
+    //     },
+    //     stops: [
+    //         [0, color],
+    //         [1, color.brighten(-0.2).get('rgb')]
+    //     ]
+    //   }
+    // })
+    // console.log(newColors)
+    // return newColors
+    // }
+  }
+
+  @bind
   addChartRotation (chart: any) {
+    this.getColors(chart)
     const H = Highcharts
 
     const dragStart = (eStart: any) => {
@@ -105,6 +128,7 @@ export class ScatterPlot extends React.Component<IScatterPlotProps> {
           }
         }
       },
+      // colors: this.getColors(),
       title: {
         text: 'Fraud cluster'
       },

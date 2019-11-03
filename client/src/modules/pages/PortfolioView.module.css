@@ -3,11 +3,19 @@
   width: 100%;
 }
 
+.buttonsArea {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 4rem;
+  margin-bottom: 1rem;
+}
+
 .chartsArea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 0 2rem;
   width: 70%;
   height: 100%;
   overflow: auto;

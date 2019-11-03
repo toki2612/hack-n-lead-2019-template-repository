@@ -27,6 +27,11 @@ export class Dashboard extends React.Component<IDashboardProps> {
         render: () => <DataView />
       },
       {
+        name: 'Algo',
+        to: `/algo`,
+        render: () => <DataView />
+      },
+      {
         name: 'Risks',
         to: `/risks`,
         render: () => <PortfolioView />

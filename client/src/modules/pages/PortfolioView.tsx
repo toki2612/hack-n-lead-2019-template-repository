@@ -8,6 +8,8 @@ import { observable, action } from 'mobx'
 import bind from 'bind-decorator'
 import { ScatterPlot } from '../charts/ScatterPlot'
 import { BarChart } from '../charts/BarChart'
+import { TextButton } from '../common/Buttons'
+import { routerStore } from '../../stores/routerStore'
 
 const fakeData: {[key: string]: any} = {
   gus: {
@@ -34,6 +36,18 @@ export class PortfolioView extends React.Component<IAccountsViewProps> {
     this.infoId = id
   }
 
+  @bind
+  @action
+  backToData () {
+    routerStore.push('/data')
+  }
+
+  @bind
+  @action
+  backToAlgo () {
+    routerStore.push('/algo')
+  }
+
   render () {
 
     let info: JSX.Element | null = null
@@ -49,8 +63,12 @@ export class PortfolioView extends React.Component<IAccountsViewProps> {
     return (
       <div className={styles.container}>
         <div className={styles.chartsArea}>
+          <div className={styles.buttonsArea}>
+            <TextButton text='Back to Data' onClick={this.backToData}/>
+            <TextButton text='Back to Algo' onClick={this.backToAlgo} />
+          </div>
           <ScatterPlot />
-          <BarChart graphId='countries' graphTitle=''/>
+          {/* <BarChart graphId='countries' graphTitle=''/> */}
         </div>
         {info}
       </div>

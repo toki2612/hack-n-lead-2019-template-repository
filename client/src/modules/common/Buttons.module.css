@@ -1,0 +1,14 @@
+.textButton {
+  background-image: linear-gradient(167deg, #24ccb8 14%, #4880ff 114%);
+  width: 6rem;
+  height: 1.6rem;
+  margin: 0 0.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 3px 6px 0 rgba(72, 128, 255, 0.3);
+}
+
+.textButtonText {
+  color: white;
+  font-size: 0.56rem;
+  font-weight: bold;
+}
