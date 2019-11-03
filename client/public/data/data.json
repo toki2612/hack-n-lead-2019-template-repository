@@ -1,16 +1,16 @@
 {
   "parameters": {
     "filters": {
-      "FilterOne": {
-        "name": "FilterOne",
+      "Country": {
+        "name": "Country",
         "color": "#DC0077"
       },
-      "FilterTwo": {
-        "name": "FilterTwo",
+      "Industry": {
+        "name": "Industry",
         "color": "#18A6F1"
       },
-      "FilterThree": {
-        "name": "FilterThree",
+      "Value": {
+        "name": "Value",
         "color": "#142A73"
       }
     }
@@ -20,17 +20,17 @@
       "name": "countries",
       "data": [
         {
-          "filter": "FilterOne",
+          "filter": "Country",
           "name": "Low risk",
           "y": 7
         },
         {
-          "filter": "FilterOne",
+          "filter": "Country",
           "name": "Medium risk",
           "y": 27
         },
         {
-          "filter": "FilterOne",
+          "filter": "Country",
           "name": "HighRisk",
           "y": 66
         }

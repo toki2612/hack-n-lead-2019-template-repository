@@ -37,15 +37,31 @@ export class Account extends React.Component<IAccountProps> {
 
     const riskData1: {[key: string]: any} = {
       risk1: {
-        label: 'Channel risk',
+        label: 'Account name',
         value: Math.random() * 50
       },
       risk2: {
-        label: 'Country risk index',
+        label: 'Country',
         value: Math.random() * 50
       },
       risk3: {
-        label: 'Transaction risk',
+        label: 'Transaction volume',
+        value: Math.random() * 50
+      },
+      risk4: {
+        label: 'Transaction number in FY',
+        value: Math.random() * 50
+      },
+      risk5: {
+        label: 'Inactive days',
+        value: Math.random() * 50
+      },
+      risk6: {
+        label: 'Linked accounts',
+        value: Math.random() * 50
+      },
+      risk7: {
+        label: 'Specifics (entered by CM)',
         value: Math.random() * 50
       }
     }
