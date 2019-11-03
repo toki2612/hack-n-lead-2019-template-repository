@@ -37,16 +37,13 @@ interface IAccountsViewProps {
 
 @observer
 export class PortfolioView extends React.Component<IAccountsViewProps> {
-  @observable infoId: any = ''
-
-  componentDidMount () {
-    this.setInfo()
-  }
+  @observable infoId: any = 'all'
 
   @bind
   @action
-  setInfo () {
-    this.infoId = this.randomProperty(fakeData)
+  setInfo (val?: any) {
+    if (val !== 'all') this.infoId = this.randomProperty(fakeData)
+    else this.infoId = 'all'
   }
 
   @bind
@@ -70,7 +67,7 @@ export class PortfolioView extends React.Component<IAccountsViewProps> {
   render () {
 
     let infoIndividual: JSX.Element | null = null
-    if (this.infoId) {
+    if (this.infoId !== 'all') {
       infoIndividual = <div className={styles.infoSection}>
                           <div className={styles.infoAreaHeader}>
                             <Typography className={styles.infoAreaTitle}>Individual board</Typography>
@@ -107,23 +104,29 @@ export class PortfolioView extends React.Component<IAccountsViewProps> {
     }
 
     let infoPortfolio: JSX.Element | null = null
-    infoPortfolio = <div className={styles.infoSection}>
+    if (this.infoId === 'all') {
+      infoPortfolio = <div className={styles.infoSection}>
                       <div className={styles.infoAreaHeader}>
                         <Typography className={styles.infoAreaTitle}>Portfolio board</Typography>
                       </div>
                       {operatorsFilter}
                       <PieChart graphId='countries' graphTitle=''/>
                     </div>
+    }
 
     return (
       <div className={styles.container}>
         <div className={styles.chartsArea}>
           <div className={styles.buttonsArea}>
-            <TextButton text='Back to Data' onClick={this.backToData}/>
-            <TextButton text='Back to Algo' onClick={this.backToAlgo} />
+            <TextButton text='Edit Data' onClick={this.backToData}/>
+            <TextButton text='Edit Algo' onClick={this.backToAlgo} />
+          </div>
+          <div className={styles.title}>
+          <Typography className={styles.infoAreaTitle}>Single risk window</Typography>
           </div>
           <ScatterPlot onPointClick={this.setInfo}/>
           {/* <BarChart graphId='countries' graphTitle=''/> */}
+          <div className={styles.emptyArea} onClick={() => this.setInfo('all')}></div>
         </div>
         <div className={styles.infoArea}>
           {infoIndividual}

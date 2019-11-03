@@ -22,9 +22,9 @@ export class Dashboard extends React.Component<IDashboardProps> {
 
     const tabs = [
       {
-        name: 'Data',
-        to: `/data`,
-        render: () => <DataView type= 'data'/>
+        name: 'Risks',
+        to: `/risks`,
+        render: () => <PortfolioView />
       },
       {
         name: 'Algo',
@@ -32,14 +32,16 @@ export class Dashboard extends React.Component<IDashboardProps> {
         render: () => <DataView type= 'algo' />
       },
       {
-        name: 'Risks',
-        to: `/risks`,
-        render: () => <PortfolioView />
+        name: 'Data',
+        to: `/data`,
+        render: () => <DataView type= 'data'/>
       },
       {
         name: 'Report',
         to: `/report`,
-        render: () => <div/>
+        render: () => <div className={styles.reportBox}>
+          <div className={styles.reportContent}></div>
+        </div>
       }
     ]
 

@@ -6,15 +6,24 @@ import * as Highcharts from 'highcharts'
 import highcharts3d from 'highcharts/highcharts-3d'
 import HighchartsReact from 'highcharts-react-official'
 import bind from 'bind-decorator'
+import { enhanceWithClickOutside } from 'react-click-outside'
+import { action } from 'mobx'
 highcharts3d(Highcharts)
 
 interface IScatterPlotProps {
-  onPointClick? (): void
+  onPointClick? (val?: any): void
+  clickOutside? (): void
 }
 
+// @enhanceWithClickOutside
 @observer
+// @enhanceWithClickOutside
 export class ScatterPlot extends React.Component<IScatterPlotProps> {
   chart = React.createRef<any>()
+
+  handleClickOutside () {
+    if (this.props.clickOutside) this.props.clickOutside()
+  }
 
   @bind
   getColors (chart: Highcharts.Chart) {
@@ -35,6 +44,12 @@ export class ScatterPlot extends React.Component<IScatterPlotProps> {
     // console.log(newColors)
     // return newColors
     // }
+  }
+
+  @bind
+  @action
+  clickPoint () {
+    if (this.props.onPointClick) this.props.onPointClick()
   }
 
   @bind
@@ -119,7 +134,7 @@ export class ScatterPlot extends React.Component<IScatterPlotProps> {
       },
       // colors: this.getColors(),
       title: {
-        text: 'Fraud cluster'
+        text: 'Account cluster'
       },
       plotOptions: {
         scatter: {
@@ -182,7 +197,7 @@ export class ScatterPlot extends React.Component<IScatterPlotProps> {
     }
 
     return (
-      <div className={styles.container} onClick={this.props.onPointClick}>
+      <div className={styles.container} onClick={this.clickPoint}>
         <HighchartsReact
           highcharts={Highcharts}
           options={chartOptions}

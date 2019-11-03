@@ -14,6 +14,17 @@ interface IAccountProps {
 
 const colors = ['#24ccb8', '#ff5660', '#ffc400']
 
+const riskData = [
+  'Account name',
+  'Country',
+  'Transaction volume',
+  'Transaction number in FY',
+  'Inactive days',
+  'Linked accounts',
+  'Specifics (entered by CM)',
+  'Risk score'
+]
+
 @observer
 export class Account extends React.Component<IAccountProps> {
 
@@ -24,7 +35,7 @@ export class Account extends React.Component<IAccountProps> {
 
   render () {
 
-    const riskData: {[key: string]: any} = {
+    const riskData1: {[key: string]: any} = {
       risk1: {
         label: 'Channel risk',
         value: Math.random() * 50
@@ -40,8 +51,8 @@ export class Account extends React.Component<IAccountProps> {
     }
 
     const sliders = []
-    for (const id in riskData) {
-      const risk = riskData[id]
+    for (const id in riskData1) {
+      const risk = riskData1[id]
       sliders.push(
         <RiskSlider key={id} label={risk.label} value={risk.value}/>
       )

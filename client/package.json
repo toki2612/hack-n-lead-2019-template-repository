@@ -20,6 +20,7 @@
     "history": "^4.10.1",
     "mobx-react-matchmedia": "^1.6.0",
     "react": "^16.11.0",
+    "react-click-outside": "^3.0.1",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
     "reflect-metadata": "^0.1.13",

@@ -43,7 +43,7 @@ export class DataView extends React.Component<IDataViewProps> {
       this.timer = setTimeout(() => {
         this.setSuccess(true)
         this.setLoading(false)
-      }, 2000)
+      }, 1000)
     }
   }
 
