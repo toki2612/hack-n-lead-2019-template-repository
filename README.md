@@ -1,12 +1,16 @@
 # [Hack n Lead 2019](https://womenplusplus.ch/hacknlead)
 
-===
+====
 
-## Steps
+DataPreprocessing folder:
+- Take the raw data from the Data folder, given for the challenge: large.csv
+- Preprocess it with Mathematica using the file 01_fraude_DataProcessing.nb  --> largeD19.csv
+- Preprocess it with R using the file 02_fraude_DataProcessing.R --> largeD21.csv
 
-1. `Fork` this repository
-2. Add your team members as contributors
-3. Put your presentation in the `docs/` folder
-4. This repository **must** be open source (and licensed) in order to submit
+
+Analysis folder:
+- CreditSuisseChallengeAnalysis.Rmd can be used to produce the file: CreditSuisseChallengeAnalysis.html which will give a overview of all features and a simple threshold approach to detect anomalies.
+
+
 
 
