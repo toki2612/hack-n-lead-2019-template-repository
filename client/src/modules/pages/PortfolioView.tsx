@@ -7,6 +7,7 @@ import { Account } from '../input/Account'
 import { observable, action } from 'mobx'
 import bind from 'bind-decorator'
 import { ScatterPlot } from '../charts/ScatterPlot'
+import { BarChart } from '../charts/BarChart'
 
 const fakeData: {[key: string]: any} = {
   gus: {
@@ -49,6 +50,7 @@ export class PortfolioView extends React.Component<IAccountsViewProps> {
       <div className={styles.container}>
         <div className={styles.chartsArea}>
           <ScatterPlot />
+          <BarChart graphId='countries' graphTitle=''/>
         </div>
         {info}
       </div>

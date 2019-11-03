@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom'
 import { MatchMediaProvider } from 'mobx-react-matchmedia'
 import { Dashboard } from './modules/pages/Dashboard'
 import { breakpoints } from './stores/breakpointsStore'
+import { dataStore } from './stores/dataStore'
 
 type AppProps = {}
 
@@ -12,7 +13,7 @@ type AppProps = {}
 class App extends React.Component<AppProps> {
 
   async componentDidMount () {
-    // await dataStore.load()
+    await dataStore.load()
   }
 
   render () {

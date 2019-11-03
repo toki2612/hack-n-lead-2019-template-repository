@@ -5,9 +5,12 @@
 
 .chartsArea {
   display: flex;
-  flex: 1;
-  justify-content: center;
-  margin-top: 120px;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  width: 70%;
+  height: 100%;
+  overflow: auto;
 }
 
 .infoArea {
@@ -15,6 +18,11 @@
   flex-direction: column;
   width: 30%;
   background-color: #fff;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .infoAreaHeader {
