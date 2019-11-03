@@ -14,6 +14,8 @@ Analysis folder: (R)
 ML folder: (Python)
 - HacknLead_credit_swiss.ipynb a Jupyter Notebook for Python computations. Load the data into the ML folder and run the notebook. There will be results on supervised and unsupervised learning algorithms.
 
+All data analysis files are available here - https://polybox.ethz.ch/index.php/s/hOamDfvbRGxJQRm?path=%2F
+
 User Interface: (Typescript + React)
 - In /client folder run `yarn install`, to run the app `yarn start`
 
