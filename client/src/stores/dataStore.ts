@@ -19,11 +19,12 @@ interface IDataGraphEntry {
   filter: string
   name: string
   values: number[]
+  y: number
 }
 
 class DataGraph {
   @observable name: string = ''
-  @observable xAxis: number[] | string[] = []
+  @observable xAxis?: number[] | string[] = []
   @observable data: IDataGraphEntry[] = []
 
   @computed get byOperator () {

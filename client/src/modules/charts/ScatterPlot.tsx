@@ -9,17 +9,12 @@ import bind from 'bind-decorator'
 highcharts3d(Highcharts)
 
 interface IScatterPlotProps {
-
+  onPointClick? (): void
 }
 
 @observer
 export class ScatterPlot extends React.Component<IScatterPlotProps> {
   chart = React.createRef<any>()
-
-  @bind
-  drag () {
-    if (this.chart && this.chart.current) console.log(this.chart)
-  }
 
   @bind
   getColors (chart: Highcharts.Chart) {
@@ -109,11 +104,6 @@ export class ScatterPlot extends React.Component<IScatterPlotProps> {
         style: {
           fontFamily: 'Nunito'
         },
-        events: {
-          dragStart: function () {
-            console.log('hello')
-          }
-        },
         options3d: {
           enabled: true,
           alpha: 10,
@@ -193,7 +183,7 @@ export class ScatterPlot extends React.Component<IScatterPlotProps> {
     }
 
     return (
-      <div className={styles.container}>
+      <div className={styles.container} onClick={this.props.onPointClick}>
         <HighchartsReact
           highcharts={Highcharts}
           options={chartOptions}

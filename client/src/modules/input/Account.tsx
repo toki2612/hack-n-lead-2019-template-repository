@@ -5,29 +5,31 @@ import styles from './Account.module.css'
 import { Typography } from '@material-ui/core'
 import { RiskSlider } from '../common/RiskSlider'
 
-const riskData: {[key: string]: any} = {
-  risk1: {
-    label: 'Channel risk',
-    value: 34
-  },
-  risk2: {
-    label: 'Country risk index',
-    value: 20
-  },
-  risk3: {
-    label: 'Transaction risk',
-    value: 50
-  }
-}
-
 interface IAccountProps {
   riskRate: number
+  data: any
+  id: string
 }
 
 @observer
 export class Account extends React.Component<IAccountProps> {
 
   render () {
+
+    const riskData: {[key: string]: any} = {
+      risk1: {
+        label: 'Channel risk',
+        value: Math.random() * 50
+      },
+      risk2: {
+        label: 'Country risk index',
+        value: Math.random() * 50
+      },
+      risk3: {
+        label: 'Transaction risk',
+        value: Math.random() * 50
+      }
+    }
 
     const sliders = []
     for (const id in riskData) {
@@ -52,12 +54,12 @@ export class Account extends React.Component<IAccountProps> {
           </div>
         </div>
         <div className={styles.profile}>
-          <div className={styles.profileAvatar}>
+          <div className={styles.profileAvatar} style={{ backgroundImage: `url(${this.props.data!.image})` }}>
 
           </div>
           <div className={styles.profileData}>
-            <Typography className={styles.nameText}>Gus Fring</Typography>
-            <Typography className={styles.dataText}>USA</Typography>
+            <Typography className={styles.nameText}>{this.props.data!.name}</Typography>
+            <Typography className={styles.dataText}>{this.props.data!.country}</Typography>
           </div>
         </div>
         <div className={styles.risks}>

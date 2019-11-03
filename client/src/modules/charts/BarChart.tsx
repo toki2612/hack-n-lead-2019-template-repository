@@ -46,7 +46,7 @@ export class BarChart extends React.Component<IBarChartProps> {
 
     const chartOptions: any = {
       chart: {
-        type: 'column',
+        type: 'pie',
         height: '400px',
         style: {
           fontFamily: 'Nunito'
