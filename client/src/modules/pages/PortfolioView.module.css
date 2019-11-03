@@ -41,6 +41,8 @@
 
 .infoAreaHeader {
   padding: 1.5rem 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .infoAreaTitle {

@@ -19,7 +19,6 @@ export class ScatterPlot extends React.Component<IScatterPlotProps> {
   @bind
   getColors (chart: Highcharts.Chart) {
     // if (this.chart && this.chart.current) {
-    console.log(chart)
     // const newColors = colors.map((color: any) => {
     //   return {
     //     radialGradient: {

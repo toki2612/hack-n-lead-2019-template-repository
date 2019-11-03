@@ -10,13 +10,14 @@ type IButton = {
   alt?: string
   size?: 'small' | 'large'
   url?: string
+  color?: string
 }
 
 export class TextButton extends React.Component<IButton> {
 
   render () {
     return (
-      <ButtonBase classes={{ root: styles.textButton }} onClick={this.props.onClick}>
+      <ButtonBase classes={{ root: styles.textButton }} onClick={this.props.onClick} style={{ backgroundColor: this.props.color }}>
         <Typography classes={{ root: styles.textButtonText }}>{this.props.text}</Typography>
       </ButtonBase>
     )

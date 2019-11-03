@@ -24,12 +24,12 @@ export class Dashboard extends React.Component<IDashboardProps> {
       {
         name: 'Data',
         to: `/data`,
-        render: () => <DataView />
+        render: () => <DataView type= 'data'/>
       },
       {
         name: 'Algo',
         to: `/algo`,
-        render: () => <DataView />
+        render: () => <DataView type= 'algo' />
       },
       {
         name: 'Risks',

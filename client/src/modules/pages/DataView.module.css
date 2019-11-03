@@ -7,14 +7,27 @@
 
 .messageBox {
   width: 16rem;
-  height: 9rem;
+  height: 50%;
+  
   background-color: #fff;
   border-radius: 3px;
 
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+ 
+}
+
+.messageContent {
+  height: 9rem;
+  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.messageData {
+  max-height: 10rem;
 }
 
 .messageText {
@@ -46,4 +59,37 @@
 
 .checkIcon {
   color: #24ccb8;
+}
+
+.featureBox {
+  width: 40%;
+  height: 50%;
+  background-color: #fff;
+  border-right: 1px solid #e8e8e8;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.featureSection {
+  height: 25%;
+}
+
+.featuresTitle {
+  color: #ccc;
+  font-size: 0.64rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.featureLabel {
+  color: #4a4a4a;
+  font-size: 0.64rem;
+}
+
+.checkbox, .checked {
+  color: #ccc !important;
 }

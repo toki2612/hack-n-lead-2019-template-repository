@@ -37,7 +37,7 @@ interface IAccountsViewProps {
 
 @observer
 export class PortfolioView extends React.Component<IAccountsViewProps> {
-  @observable infoId: any = 'gus'
+  @observable infoId: any = ''
 
   componentDidMount () {
     this.setInfo()
@@ -74,6 +74,7 @@ export class PortfolioView extends React.Component<IAccountsViewProps> {
       infoIndividual = <div className={styles.infoSection}>
                           <div className={styles.infoAreaHeader}>
                             <Typography className={styles.infoAreaTitle}>Individual board</Typography>
+                            <TextButton text='Request more info'/>
                           </div>
                           <Account riskRate={56} data={fakeData[this.infoId]} id={this.infoId} key={this.infoId}/>
                         </div>
