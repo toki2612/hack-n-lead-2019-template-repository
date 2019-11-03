@@ -9,7 +9,7 @@ DataPreprocessing folder: (Mathematica and R)
 
 
 Analysis folder: (R)
-- CreditSuisseChallengeAnalysis.Rmd can be used to produce the file with R: CreditSuisseChallengeAnalysis.html which will give a overview of all features and a simple threshold approach to detect anomalies.
+- CreditSuisseChallengeAnalysis.Rmd can be used to produce the file with R: CreditSuisseChallengeAnalysis.html which will give an overview of all features and a simple threshold approach to detect anomalies.
 
 ML folder: (Python)
 - HacknLead_credit_swiss.ipynb a Jupyter Notebook for Python computations. Load the data into the ML folder and run the notebook. There will be results on supervised and unsupervised learning algorithms.
