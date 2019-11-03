@@ -1,0 +1,40 @@
+{
+  "parameters": {
+    "filters": {
+      "FilterOne": {
+        "name": "FilterOne",
+        "color": "#DC0077"
+      },
+      "FilterTwo": {
+        "name": "FilterTwo",
+        "color": "#18A6F1"
+      },
+      "FilterThree": {
+        "name": "FilterThree",
+        "color": "#142A73"
+      }
+    }
+  },
+  "graphs": [
+    {
+      "name": "countries",
+      "data": [
+        {
+          "filter": "FilterOne",
+          "name": "Low risk",
+          "y": 7
+        },
+        {
+          "filter": "FilterOne",
+          "name": "Medium risk",
+          "y": 27
+        },
+        {
+          "filter": "FilterOne",
+          "name": "HighRisk",
+          "y": 66
+        }
+      ]
+    }
+  ]
+}
